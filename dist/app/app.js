@@ -1,0 +1,1 @@
+!function(){var t=angular.module("portfolioApp",[]);t.controller("MainController",["$scope",function(t){t.data={logo:"dist/assets/img/PFBlogo.png",title:"Hi, I am Kai",subtitle:"I am a Front-End Developer",images:[{src:"solartech.png"},{src:"fuh.png"},{src:"gigup.png"}]}}]),t.directive("mainNav",function(){return{restrict:"E",templateUrl:"dist/app/templates/mainNav.html"}})}();
