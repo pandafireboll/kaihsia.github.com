@@ -28,18 +28,16 @@
 						<div class="imac-frame">
 							<img class="img-responsive img-center" src="dist/assets/img/imac.png" alt=""/>
 							<div class="imac-screen flexslider">
-								<ul class="slides" ng-repeat="img in data.images">
-									<li><img ng-src="dist/assets/img/{{img.src}}" /></li>
+								<ul class="slides">
+									<li ng-repeat="img in data.images"><img data-ng-src="dist/assets/img/{{img.src}}" /></li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					
-					<div class="col-sm-6 text-col">
-										
+					<div class="col-sm-6 text-col">			
 						<h1>{{data.title}}</h1>
 						<p>{{data.subtitle}}</p>
-						
 					</div>
 				</div>
 			
