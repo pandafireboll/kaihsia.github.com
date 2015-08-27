@@ -22,11 +22,10 @@
 		<header id="home" class="jumbotron">
 		
 			<div class="container">
-			
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="imac-frame">
-							<img class="img-responsive img-center" src="dist/assets/img/imac.png" alt=""/>
+							<img class="img-responsive img-center" src="dist/assets/img/imac.png" />
 							<div class="imac-screen flexslider">
 								<ul class="slides">
 									<li ng-repeat="img in data.images"><img data-ng-src="dist/assets/img/{{img.src}}" /></li>
@@ -40,9 +39,7 @@
 						<p>{{data.subtitle}}</p>
 					</div>
 				</div>
-			
 			</div>
-
 		</header>
 
 
@@ -53,7 +50,7 @@
 				<header class="section-header text-center">
 				
 					<h1 class="scrollimation scale-in">What I Do</h1>
-					<p>Anywhere from creating a simple snippet to a webapp.</p>
+					<p>{{data.servicesMainSub}}</p>
 				
 				</header>
 			
@@ -62,22 +59,22 @@
 					<div class="col-md-6 col-sm-6 item scrollimation fade-up d1">
 					
 						<div class="icon">
-							<img class="img-responsive img-center" src="dist/assets/img/service2.png" alt="" />
+							<img class="img-responsive img-center" ng-src="dist/assets/img/{{data.service[0].img}}" />
 						</div>
 						
-						<h2>Web Development</h2>
-						<p>Creating websites that work.</p>
+						<h2>{{data.service[0].title}}</h2>
+						<p>{{data.service[0].description}}</p>
 					
 					</div>
 					
 					<div class="col-md-6 col-sm-6 item scrollimation fade-up d2">
 					
 						<div class="icon">
-							<img class="img-responsive img-center" src="dist/assets/img/service3.png" alt="" />
+							<img class="img-responsive img-center" ng-src="dist/assets/img/{{data.service[1].img}}" />
 						</div>
 						
-						<h2>Site Management</h2>
-						<p>If you need your website maintained, I can make sure it's up-to-date.</p>
+						<h2>{{data.service[1].title}}</h2>
+						<p>{{data.service[1].description}}</p>
 					
 					</div>
 				
@@ -101,9 +98,9 @@
 				
 					<div class="col-sm-8 col-sm-offset-2">
 					
-						<img class="img-responsive img-center img-circle scrollimation fade-left" src="dist/assets/img/about.jpg" alt="" />
+						<img class="img-responsive img-center img-circle scrollimation fade-left" src="dist/assets/img/{{data.about.img}}" />
 				
-						<p class="text-center scrollimation fade-in">Started off my web design journey back in 2010 with content marketing and SEO.  From there, I started creating static sites mainly for displaying info on company sites with Wordpress or from scratch.  In 2014, my journey into Javascript began.  Been focusing on creating webapps with jQuery, Angular, and sometimes React ever since.</p>
+						<p class="text-center scrollimation fade-in">{{data.about.description}}</p>
 					
 					</div>
 					
@@ -118,26 +115,21 @@
 			<div class="container">
 			
 				<div class="row skills">
-					
-					<h1 class="text-center scrollimation fade-in">Skills</h1>
-					<div class="col-sm-4 col-md-4 text-center">
-						<span class="chart" data-percent="60"><span class="percent">60</span></span>
-						<h2 class="text-center">HTML/CSS</h2>
+					<h1 class="text-center scrollimation fade-in">What I Use Normally</h1>
+					<div class="col-sm-4 col-md-4 text-center scrollimation fade-in d2" ng-repeat="tech in data.tech">
+						<img class="img-responsive img-center" src="dist/assets/img/{{tech.img}}" height="50px"/>
+						<h2 class="text-center">{{tech.title}}</h2>
 					</div>
-					<div class="col-sm-4 col-md-4 text-center">
-						<span class="chart" data-percent="40"><span class="percent">40</span></span>
-						<h2 class="text-center">Javascript</h2>
-					</div>
-					<div class="col-sm-4 col-md-4 text-center">
-						<span class="chart" data-percent="10"><span class="percent">10</span></span>
-						<h2 class="text-center">Node.js</h2>
-					</div>
+				
 				</div>
 			
 			</div>
 		
 		
 		</section>
+
+
+
 
 		<footer id="main-footer" class="dark-bg light-typo">
 		
