@@ -1,3 +1,3 @@
 Portfolio App
 
-Created with Me Flat Bootstrap Template and soon with AngularJS
+Created with Me Flat Bootstrap Template and AngularJS
